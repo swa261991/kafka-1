@@ -37,3 +37,5 @@ out/
 *.tfstate.backup
 
 mock-mcc-server/node_modules
+/.gradle/
+/.idea/
