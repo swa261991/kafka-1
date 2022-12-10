@@ -1,0 +1,373 @@
+16:12:55: Executing task 'ConsumerDemo.main()'...
+
+> Task :kafka-basics:compileJava UP-TO-DATE
+> Task :kafka-basics:processResources UP-TO-DATE
+> Task :kafka-basics:classes UP-TO-DATE
+
+> Task :kafka-basics:ConsumerDemo.main()
+[main] INFO ConsumerDemo - I am a Kafka Consumer
+[main] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-my-second-application-1
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my-second-application
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.3.1
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: e23c59d00e687ff5
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1670668976799
+[main] INFO org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Subscribed to topic(s): demo_java
+[main] INFO ConsumerDemo - Polling
+[main] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Resetting the last seen epoch of partition demo_java-0 to 0 since the associated topicId changed from null to X6xsCHTHQUKQ0PyBaPKj4g
+[main] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Resetting the last seen epoch of partition demo_java-1 to 0 since the associated topicId changed from null to X6xsCHTHQUKQ0PyBaPKj4g
+[main] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Resetting the last seen epoch of partition demo_java-2 to 0 since the associated topicId changed from null to X6xsCHTHQUKQ0PyBaPKj4g
+[main] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Cluster ID: YpJ8ULNzSHWrQY3jhgVfAg
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] (Re-)joining group
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Request joining group due to: need to re-join with the given member-id: consumer-my-second-application-1-2a062755-3657-44e5-a8d9-a3ba8db6fe01
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] (Re-)joining group
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Successfully joined group with generation Generation{generationId=1, memberId='consumer-my-second-application-1-2a062755-3657-44e5-a8d9-a3ba8db6fe01', protocol='range'}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Finished assignment for group at generation 1: {consumer-my-second-application-1-2a062755-3657-44e5-a8d9-a3ba8db6fe01=Assignment(partitions=[demo_java-0, demo_java-1, demo_java-2])}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Successfully synced group in generation Generation{generationId=1, memberId='consumer-my-second-application-1-2a062755-3657-44e5-a8d9-a3ba8db6fe01', protocol='range'}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Notifying assignor about the new Assignment(partitions=[demo_java-0, demo_java-1, demo_java-2])
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Adding newly assigned partitions: demo_java-0, demo_java-1, demo_java-2
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Found no committed offset for partition demo_java-0
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Found no committed offset for partition demo_java-1
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Found no committed offset for partition demo_java-2
+[main] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Resetting offset for partition demo_java-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+[main] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Resetting offset for partition demo_java-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+[main] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Resetting offset for partition demo_java-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+[main] INFO ConsumerDemo - Key: null, Value: hello world 0
+[main] INFO ConsumerDemo - Partition: 0, Offset: 0
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1
+[main] INFO ConsumerDemo - Partition: 0, Offset: 1
+[main] INFO ConsumerDemo - Key: null, Value: hello world 2
+[main] INFO ConsumerDemo - Partition: 0, Offset: 2
+[main] INFO ConsumerDemo - Key: null, Value: hello world 3
+[main] INFO ConsumerDemo - Partition: 0, Offset: 3
+[main] INFO ConsumerDemo - Key: null, Value: hello world 4
+[main] INFO ConsumerDemo - Partition: 0, Offset: 4
+[main] INFO ConsumerDemo - Key: null, Value: hello world 5
+[main] INFO ConsumerDemo - Partition: 0, Offset: 5
+[main] INFO ConsumerDemo - Key: null, Value: hello world 6
+[main] INFO ConsumerDemo - Partition: 0, Offset: 6
+[main] INFO ConsumerDemo - Key: null, Value: hello world 7
+[main] INFO ConsumerDemo - Partition: 0, Offset: 7
+[main] INFO ConsumerDemo - Key: null, Value: hello world 8
+[main] INFO ConsumerDemo - Partition: 0, Offset: 8
+[main] INFO ConsumerDemo - Key: null, Value: hello world 9
+[main] INFO ConsumerDemo - Partition: 0, Offset: 9
+[main] INFO ConsumerDemo - Key: null, Value: hello world 0
+[main] INFO ConsumerDemo - Partition: 0, Offset: 10
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1
+[main] INFO ConsumerDemo - Partition: 0, Offset: 11
+[main] INFO ConsumerDemo - Key: null, Value: hello world 2
+[main] INFO ConsumerDemo - Partition: 0, Offset: 12
+[main] INFO ConsumerDemo - Key: null, Value: hello world 3
+[main] INFO ConsumerDemo - Partition: 0, Offset: 13
+[main] INFO ConsumerDemo - Key: null, Value: hello world 4
+[main] INFO ConsumerDemo - Partition: 0, Offset: 14
+[main] INFO ConsumerDemo - Key: null, Value: hello world 5
+[main] INFO ConsumerDemo - Partition: 0, Offset: 15
+[main] INFO ConsumerDemo - Key: null, Value: hello world 6
+[main] INFO ConsumerDemo - Partition: 0, Offset: 16
+[main] INFO ConsumerDemo - Key: null, Value: hello world 7
+[main] INFO ConsumerDemo - Partition: 0, Offset: 17
+[main] INFO ConsumerDemo - Key: null, Value: hello world 8
+[main] INFO ConsumerDemo - Partition: 0, Offset: 18
+[main] INFO ConsumerDemo - Key: null, Value: hello world 9
+[main] INFO ConsumerDemo - Partition: 0, Offset: 19
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1670655684970
+[main] INFO ConsumerDemo - Partition: 0, Offset: 20
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1670655699785
+[main] INFO ConsumerDemo - Partition: 0, Offset: 21
+[main] INFO ConsumerDemo - Key: id_1, Value: hello world 1
+[main] INFO ConsumerDemo - Partition: 0, Offset: 22
+[main] INFO ConsumerDemo - Key: id_3, Value: hello world 3
+[main] INFO ConsumerDemo - Partition: 0, Offset: 23
+[main] INFO ConsumerDemo - Key: id_6, Value: hello world 6
+[main] INFO ConsumerDemo - Partition: 0, Offset: 24
+[main] INFO ConsumerDemo - Key: id_1, Value: hello world 1670666705639
+[main] INFO ConsumerDemo - Partition: 0, Offset: 25
+[main] INFO ConsumerDemo - Key: id_3, Value: hello world 1670666705639
+[main] INFO ConsumerDemo - Partition: 0, Offset: 26
+[main] INFO ConsumerDemo - Key: id_6, Value: hello world 1670666705655
+[main] INFO ConsumerDemo - Partition: 0, Offset: 27
+[main] INFO ConsumerDemo - Key: id_1, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 0, Offset: 28
+[main] INFO ConsumerDemo - Key: id_3, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 0, Offset: 29
+[main] INFO ConsumerDemo - Key: id_6, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 0, Offset: 30
+[main] INFO ConsumerDemo - Key: id_1, Value: hello world 1670668693964
+[main] INFO ConsumerDemo - Partition: 0, Offset: 31
+[main] INFO ConsumerDemo - Key: id_3, Value: hello world 1670668693964
+[main] INFO ConsumerDemo - Partition: 0, Offset: 32
+[main] INFO ConsumerDemo - Key: id_6, Value: hello world 1670668693979
+[main] INFO ConsumerDemo - Partition: 0, Offset: 33
+[main] INFO ConsumerDemo - Key: null, Value: hello world
+[main] INFO ConsumerDemo - Partition: 1, Offset: 0
+[main] INFO ConsumerDemo - Key: null, Value: hello world 0
+[main] INFO ConsumerDemo - Partition: 1, Offset: 1
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1
+[main] INFO ConsumerDemo - Partition: 1, Offset: 2
+[main] INFO ConsumerDemo - Key: null, Value: hello world 2
+[main] INFO ConsumerDemo - Partition: 1, Offset: 3
+[main] INFO ConsumerDemo - Key: null, Value: hello world 3
+[main] INFO ConsumerDemo - Partition: 1, Offset: 4
+[main] INFO ConsumerDemo - Key: null, Value: hello world 4
+[main] INFO ConsumerDemo - Partition: 1, Offset: 5
+[main] INFO ConsumerDemo - Key: null, Value: hello world 5
+[main] INFO ConsumerDemo - Partition: 1, Offset: 6
+[main] INFO ConsumerDemo - Key: null, Value: hello world 6
+[main] INFO ConsumerDemo - Partition: 1, Offset: 7
+[main] INFO ConsumerDemo - Key: null, Value: hello world 7
+[main] INFO ConsumerDemo - Partition: 1, Offset: 8
+[main] INFO ConsumerDemo - Key: null, Value: hello world 8
+[main] INFO ConsumerDemo - Partition: 1, Offset: 9
+[main] INFO ConsumerDemo - Key: null, Value: hello world 9
+[main] INFO ConsumerDemo - Partition: 1, Offset: 10
+[main] INFO ConsumerDemo - Key: id_0, Value: hello world 0
+[main] INFO ConsumerDemo - Partition: 1, Offset: 11
+[main] INFO ConsumerDemo - Key: id_8, Value: hello world 8
+[main] INFO ConsumerDemo - Partition: 1, Offset: 12
+[main] INFO ConsumerDemo - Key: id_0, Value: hello world 1670666705251
+[main] INFO ConsumerDemo - Partition: 1, Offset: 13
+[main] INFO ConsumerDemo - Key: id_8, Value: hello world 1670666705655
+[main] INFO ConsumerDemo - Partition: 1, Offset: 14
+[main] INFO ConsumerDemo - Key: id_0, Value: hello world 1670666730193
+[main] INFO ConsumerDemo - Partition: 1, Offset: 15
+[main] INFO ConsumerDemo - Key: id_8, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 1, Offset: 16
+[main] INFO ConsumerDemo - Key: id_0, Value: hello world 1670668693562
+[main] INFO ConsumerDemo - Partition: 1, Offset: 17
+[main] INFO ConsumerDemo - Key: id_8, Value: hello world 1670668693979
+[main] INFO ConsumerDemo - Partition: 1, Offset: 18
+[main] INFO ConsumerDemo - Key: null, Value: hello world 0
+[main] INFO ConsumerDemo - Partition: 2, Offset: 0
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1
+[main] INFO ConsumerDemo - Partition: 2, Offset: 1
+[main] INFO ConsumerDemo - Key: null, Value: hello world 2
+[main] INFO ConsumerDemo - Partition: 2, Offset: 2
+[main] INFO ConsumerDemo - Key: null, Value: hello world 3
+[main] INFO ConsumerDemo - Partition: 2, Offset: 3
+[main] INFO ConsumerDemo - Key: null, Value: hello world 4
+[main] INFO ConsumerDemo - Partition: 2, Offset: 4
+[main] INFO ConsumerDemo - Key: null, Value: hello world 5
+[main] INFO ConsumerDemo - Partition: 2, Offset: 5
+[main] INFO ConsumerDemo - Key: null, Value: hello world 6
+[main] INFO ConsumerDemo - Partition: 2, Offset: 6
+[main] INFO ConsumerDemo - Key: null, Value: hello world 7
+[main] INFO ConsumerDemo - Partition: 2, Offset: 7
+[main] INFO ConsumerDemo - Key: null, Value: hello world 8
+[main] INFO ConsumerDemo - Partition: 2, Offset: 8
+[main] INFO ConsumerDemo - Key: null, Value: hello world 9
+[main] INFO ConsumerDemo - Partition: 2, Offset: 9
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1670655691578
+[main] INFO ConsumerDemo - Partition: 2, Offset: 10
+[main] INFO ConsumerDemo - Key: null, Value: hello world 1670655695854
+[main] INFO ConsumerDemo - Partition: 2, Offset: 11
+[main] INFO ConsumerDemo - Key: id_2, Value: hello world 2
+[main] INFO ConsumerDemo - Partition: 2, Offset: 12
+[main] INFO ConsumerDemo - Key: id_4, Value: hello world 4
+[main] INFO ConsumerDemo - Partition: 2, Offset: 13
+[main] INFO ConsumerDemo - Key: id_5, Value: hello world 5
+[main] INFO ConsumerDemo - Partition: 2, Offset: 14
+[main] INFO ConsumerDemo - Key: id_7, Value: hello world 7
+[main] INFO ConsumerDemo - Partition: 2, Offset: 15
+[main] INFO ConsumerDemo - Key: id_9, Value: hello world 9
+[main] INFO ConsumerDemo - Partition: 2, Offset: 16
+[main] INFO ConsumerDemo - Key: id_2, Value: hello world 1670666705639
+[main] INFO ConsumerDemo - Partition: 2, Offset: 17
+[main] INFO ConsumerDemo - Key: id_4, Value: hello world 1670666705639
+[main] INFO ConsumerDemo - Partition: 2, Offset: 18
+[main] INFO ConsumerDemo - Key: id_5, Value: hello world 1670666705655
+[main] INFO ConsumerDemo - Partition: 2, Offset: 19
+[main] INFO ConsumerDemo - Key: id_7, Value: hello world 1670666705655
+[main] INFO ConsumerDemo - Partition: 2, Offset: 20
+[main] INFO ConsumerDemo - Key: id_9, Value: hello world 1670666705655
+[main] INFO ConsumerDemo - Partition: 2, Offset: 21
+[main] INFO ConsumerDemo - Key: id_2, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 2, Offset: 22
+[main] INFO ConsumerDemo - Key: id_4, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 2, Offset: 23
+[main] INFO ConsumerDemo - Key: id_5, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 2, Offset: 24
+[main] INFO ConsumerDemo - Key: id_7, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 2, Offset: 25
+[main] INFO ConsumerDemo - Key: id_9, Value: hello world 1670666730630
+[main] INFO ConsumerDemo - Partition: 2, Offset: 26
+[main] INFO ConsumerDemo - Key: id_2, Value: hello world 1670668693964
+[main] INFO ConsumerDemo - Partition: 2, Offset: 27
+[main] INFO ConsumerDemo - Key: id_4, Value: hello world 1670668693979
+[main] INFO ConsumerDemo - Partition: 2, Offset: 28
+[main] INFO ConsumerDemo - Key: id_5, Value: hello world 1670668693979
+[main] INFO ConsumerDemo - Partition: 2, Offset: 29
+[main] INFO ConsumerDemo - Key: id_7, Value: hello world 1670668693979
+[main] INFO ConsumerDemo - Partition: 2, Offset: 30
+[main] INFO ConsumerDemo - Key: id_9, Value: hello world 1670668693979
+[main] INFO ConsumerDemo - Partition: 2, Offset: 31
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Key: id_1, Value: hello world 1670669006828
+[main] INFO ConsumerDemo - Partition: 0, Offset: 34
+[main] INFO ConsumerDemo - Key: id_3, Value: hello world 1670669006829
+[main] INFO ConsumerDemo - Partition: 0, Offset: 35
+[main] INFO ConsumerDemo - Key: id_6, Value: hello world 1670669006829
+[main] INFO ConsumerDemo - Partition: 0, Offset: 36
+[main] INFO ConsumerDemo - Key: id_0, Value: hello world 1670669006414
+[main] INFO ConsumerDemo - Partition: 1, Offset: 19
+[main] INFO ConsumerDemo - Key: id_8, Value: hello world 1670669006830
+[main] INFO ConsumerDemo - Partition: 1, Offset: 20
+[main] INFO ConsumerDemo - Key: id_2, Value: hello world 1670669006829
+[main] INFO ConsumerDemo - Partition: 2, Offset: 32
+[main] INFO ConsumerDemo - Key: id_4, Value: hello world 1670669006829
+[main] INFO ConsumerDemo - Partition: 2, Offset: 33
+[main] INFO ConsumerDemo - Key: id_5, Value: hello world 1670669006829
+[main] INFO ConsumerDemo - Partition: 2, Offset: 34
+[main] INFO ConsumerDemo - Key: id_7, Value: hello world 1670669006829
+[main] INFO ConsumerDemo - Partition: 2, Offset: 35
+[main] INFO ConsumerDemo - Key: id_9, Value: hello world 1670669006830
+[main] INFO ConsumerDemo - Partition: 2, Offset: 36
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+[main] INFO ConsumerDemo - Polling
+
+> Task :kafka-basics:ConsumerDemo.main() FAILED
+3 actionable tasks: 1 executed, 2 up-to-date
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':kafka-basics:ConsumerDemo.main()'.
+> Build cancelled while executing task ':kafka-basics:ConsumerDemo.main()'
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 41s
+16:13:37: Task execution finished 'ConsumerDemo.main()'.
