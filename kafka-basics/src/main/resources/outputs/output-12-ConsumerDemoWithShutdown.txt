@@ -1,0 +1,10 @@
+[main] INFO ConsumerDemoWithShutdown - Key: id_2, Value: hello world 1670739578201
+[main] INFO ConsumerDemoWithShutdown - Partition: 2, Offset: 47
+[main] INFO ConsumerDemoWithShutdown - Key: id_4, Value: hello world 1670739578201
+[main] INFO ConsumerDemoWithShutdown - Partition: 2, Offset: 48
+[main] INFO ConsumerDemoWithShutdown - Key: id_5, Value: hello world 1670739578201
+[main] INFO ConsumerDemoWithShutdown - Partition: 2, Offset: 49
+[main] INFO ConsumerDemoWithShutdown - Key: id_7, Value: hello world 1670739578201
+[main] INFO ConsumerDemoWithShutdown - Partition: 2, Offset: 50
+[main] INFO ConsumerDemoWithShutdown - Key: id_9, Value: hello world 1670739578201
+[main] INFO ConsumerDemoWithShutdown - Partition: 2, Offset: 51
