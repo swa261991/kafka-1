@@ -60,7 +60,7 @@ public class ConsumerDemoWithShutdown {
 
             // poll for new data
             while(true) {
-                log.info("Polling");
+                //log.info("Polling");   Removed later on
 
                 ConsumerRecords<String, String> records =
                         consumer.poll(Duration.ofMillis(1000));
