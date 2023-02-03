@@ -78,7 +78,7 @@ public class OpenSearchConsumer {
         properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
-        properties.setProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
+        properties.setProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
 
         // create consumer
         return new KafkaConsumer<>(properties);
@@ -130,7 +130,7 @@ public class OpenSearchConsumer {
                 int recordCount = records.count();
                 log.info("Received " + recordCount + " record(s)");
 
-                BulkRequest bulkRequest = new BulkRequest();
+//                BulkRequest bulkRequest = new BulkRequest();
 
                 for (ConsumerRecord<String, String> record : records) {
 
@@ -149,11 +149,11 @@ public class OpenSearchConsumer {
                                 .source(record.value(), XContentType.JSON)
                                 .id(id);
 
-//                        IndexResponse response = openSearchClient.index(indexRequest, RequestOptions.DEFAULT);
+                        IndexResponse response = openSearchClient.index(indexRequest, RequestOptions.DEFAULT);
 
-                        bulkRequest.add(indexRequest);
+//                        bulkRequest.add(indexRequest);
 
-//                        log.info(response.getId());
+                        log.info(response.getId());
                     } catch (Exception e){
 
                     }
@@ -161,7 +161,7 @@ public class OpenSearchConsumer {
                 }
 
 
-                if (bulkRequest.numberOfActions() > 0){
+                /*if (bulkRequest.numberOfActions() > 0){
                     BulkResponse bulkResponse = openSearchClient.bulk(bulkRequest, RequestOptions.DEFAULT);
                     log.info("Inserted " + bulkResponse.getItems().length + " record(s).");
 
@@ -174,7 +174,7 @@ public class OpenSearchConsumer {
                     // commit offsets after the batch is consumed
                     consumer.commitSync();
                     log.info("Offsets have been committed!");
-                }
+                }*/
 
 
 
